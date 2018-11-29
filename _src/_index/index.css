@@ -1,0 +1,314 @@
+:root {
+    --purpleLight: rgba(48, 45, 67, 1);
+    --purpleDark: rgba(40, 38, 57, 1);
+    --greenNeon: rgba(146, 207, 72, 1);
+    --greyLightBG: rgba(244, 246, 249, 1);
+    --greyLightFont: rgba(187, 193, 205, 1);
+    --greyDarkBG: rgba(234, 237, 243, 1);
+    --greyDarkFont: rgba(108, 120, 130, 1);
+    --greyDarkFont2: rgba(165, 173, 189, 1);
+    --orange: rgba(244, 131, 32, 1);
+    --purple: rgba(116, 75, 206, 1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    background-color: var(--greyLightBG);
+}
+
+input:active, input:focus {
+    background: var(--greyLightBG);
+}
+
+.my-col-md-2{
+    width: calc((2 * 100%) / 12);
+    padding: 0 15px;
+    display: inline-block;
+}
+
+.my-col-md-3{
+    width: calc((3 * 100%) / 12);
+    padding: 0 15px;
+    display: inline-block;
+}
+
+.my-col-md-4 {
+    width: calc((4 * 100%) / 12);
+    padding: 0 15px;
+    display: inline-block;
+}
+
+.my-col-md-5 {
+    width: calc((5 * 100%) / 12);
+    padding: 0 15px;
+    display: inline-block;
+}
+
+.my-col-md-6 {
+    width: calc((6 * 100%) / 12);
+    padding: 0 15px;
+    display: inline-block;
+}
+
+.my-col-md-7 {
+    width: calc((7 * 100%) / 12);
+    padding: 0 15px;
+    display: inline-block;
+}
+
+.my-col-md-8 {
+    width: calc((8 * 100%) / 12);
+    padding: 0 15px;
+    display: inline-block;
+}
+
+.my-col-md-9{
+    width: calc((9 * 100%) / 12);
+    padding: 0 15px;
+    display: inline-block;
+}
+
+.my-col-md-12{
+    width: calc((12 * 100%) / 12);
+    padding: 0 15px;
+    display: inline-block;
+}
+
+.f-left {
+    float: left;
+    display: block;
+}
+
+.f-right {
+    float: right;
+    display: block;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+/* MENU LATERAL */
+#sidemenu{
+    background-color: var(--purpleLight);
+    width: 230px;
+    height: 100% !important;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    /* transition: all .01s ease-in-out; */
+}
+
+#sidemenu.active{
+    width: 80px;
+}
+
+#sidemenu.active nav a span{
+    display: none;
+}
+
+
+#sidemenu nav{
+    padding-top: 100px;
+}
+
+#sidemenu nav a{
+    display: block;
+    color: var(--greyLightFont);
+    text-decoration: none;
+    padding: 15px 30px;
+    font-weight: 300;
+    transition: all .3s ease-in-out;
+}
+
+#sidemenu nav a:hover{
+    background: var(--purpleDark);
+    border-left: 5px solid var(--greenNeon);
+    padding: 15px 30px 15px 25px;
+}
+
+#sidemenu nav a:hover .fas{
+    color: var(--greenNeon);
+}
+
+#sidemenu nav a.active{
+    background: var(--purpleDark);
+    border-left: 5px solid var(--greenNeon);
+    padding: 15px 30px 15px 25px;
+}
+
+#sidemenu nav a .fas {
+    color: var(--greyLightFont);
+    font-size: 1.4rem;
+    margin-right: .8rem;
+    display: inline-block;
+    width: 30px;
+    position: relative;
+    top: 2px;   
+}
+
+#sidemenu nav a.active .fas{
+    color: var(--greenNeon);
+}
+
+/* /MENU LATERAL */
+
+/* HEADER */
+
+.header-area {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+#header {
+    margin-left: 230px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 1);
+    min-height: 68px;
+    /* transition: all .1s ease-in-out; */
+}
+
+#header.active {
+    margin-left: 80px;
+}
+
+.menu-toggle{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.menu-toggle button{
+    /* vertical-align: middle; */
+    background: var(--greyDarkFont2);
+    margin-right: 10px;
+    margin-top: 10px;
+    position: relative;
+    top: -7px;
+}
+
+.menu-toggle button .fas{
+    color: white;
+    font-size: 1rem;
+}
+
+.search-area {
+    display: inline-block;
+    width: 50%;
+}
+
+.search-area .fas{
+    color: var(--greyDarkFont2);
+}
+
+.search-area input[type="text"] {
+    background: rgba(255, 255, 255, 1);
+    border: none;
+    font-size: 1.3rem;
+    color: var(--greenNeon);
+    padding: 10px;
+    font-weight: 100;
+    width: 80%;
+    transition: all .5s ease-in-out;
+    border-radius: 1px;
+}
+
+.search-area input[type="text"]:hover {
+    background: var(--greyDarkBG);
+}
+
+.user-area{
+    /* display: inline-block; */
+    float: right;
+    padding: 10px;
+}
+
+.user-area a{
+    color: var(--greyDarkFont2);
+    display: inline-block;
+    padding-right: 20px;
+    text-decoration: none;
+    vertical-align: top;
+    height: 30px;
+}
+
+.user-area .add{
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 5px;
+}
+
+.user-area .notification {
+    position: relative;
+    font-size: 20px;
+    padding-top: 3px;
+}
+
+.user-area .notification .circle{
+    background: var(--purple);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 9px;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    position: absolute;
+    top: 4px;
+    left: 9px;
+    /* background: url("https://s3.amazonaws.com/uifaces/faces/twitter/idiot/128.jpg") no-repeat center center; */
+}
+
+.user-area a .user-img {
+    background: url("https://s3.amazonaws.com/uifaces/faces/twitter/idiot/128.jpg") no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.user-area a .fa-caret-down {
+    position: relative;
+    top: -8px;
+}
+
+/* /HEADER */
+
+/* CONTEUDO DA DASH */
+
+#content-area {
+    margin-left: 230px;
+    padding: 75px 15px 15px 15px;
+    /* transition: all .1s ease-in-out; */
+}
+
+#content-area.active {
+    margin-left: 80px;
+}
+
+@media (max-width: 768px) {
+    #sidemenu {
+        width: 80px;
+    }
+    #sidemenu nav a span {
+        display: none;
+    }
+    #header {
+        margin-left: 80px;
+    }
+    #content-area {
+        margin-left: 80px;
+    }
+}   
