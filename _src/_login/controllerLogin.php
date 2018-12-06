@@ -2,7 +2,8 @@
     // começar ou retomar uma sessão
     session_start();
     include_once("../_conn/conexao.php");
-
+   
+    $conn = mysqli_connect(HOST, USER, PWD, DB) or die("Falha na conexao: " . mysqli_connect_error());
 
     if((isset($_POST['login'])) && (isset($_POST['password']))){
         //Escapar de caracteres especiais, como aspas, prevenindo SQL injection

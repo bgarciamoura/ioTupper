@@ -32,9 +32,9 @@
         <div id="sidemenu" class="active">
             <nav>
                 <a href="#" id="dash-home" class="active sidemenu-item"><i class="fas fa-home"></i><span>Home</span></a>
-                <a href="#" id="dash-pecas" class="sidemenu-item"><i class="fas fa-coffee"></i><span>Peças</span></a>
-                <a href="#" id="dash-cli" class="sidemenu-item"><i class="fas fa-user-circle"></i><span>Clientes</span></a>
-                <a href="#" id="dash-conso" class="sidemenu-item"><i class="fas fa-users"></i><span>Consórcios</span></a>
+                <!-- <a href="#" id="dash-pecas" class="sidemenu-item"><i class="fas fa-coffee"></i><span>Peças</span></a> -->
+                <!-- <a href="#" id="dash-cli" class="sidemenu-item"><i class="fas fa-user-circle"></i><span>Clientes</span></a> -->
+                <!-- <a href="#" id="dash-conso" class="sidemenu-item"><i class="fas fa-users"></i><span>Consórcios</span></a> -->
                 <a href="#" class="sidemenu-item" onclick="sair()"><i class="fas fa-sign-out-alt"></i><span>Sair</span></a>
             </nav>
         </div>
@@ -95,10 +95,11 @@
     <script src="index.js"></script>
     <script>
        $(document).ready(function() {
-            $('#content-area').load('../_dashboard/dashboard.php');
+            $('#content-area').load('../_crud/crud.php');
 
             $('#dash-home').click(function() {
-                $('#content-area').load('../_dashboard/dashboard.php')
+                // $('#content-area').load('../_dashboard/dashboard.php')
+                $('#content-area').load('../_crud/crud.php')
             });
             $('#dash-pecas').click(function() {
                 $('#content-area').load('../_home/home.php')
